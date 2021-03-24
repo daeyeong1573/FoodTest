@@ -21,32 +21,19 @@
             android:textColor="@android:color/white"
             android:textSize="25sp" />
 
-        <TextView
-            android:id="@+id/mDayOfTheWeek"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:gravity="center"
-            android:text="월요일"
-            android:textColor="@android:color/white"
-            android:textSize="20sp" />
-
     </LinearLayout>
 
-    <androidx.cardview.widget.CardView
+    <ScrollView
         android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:layout_margin="10sp">
-
+        android:layout_height="match_parent">
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="match_parent"
             android:orientation="vertical">
-
             <TextView
                 android:id="@+id/breakFast"
-                android:layout_weight="0.5"
                 android:layout_width="match_parent"
-                android:layout_height="0dp"
+                android:layout_height="60dp"
                 android:layout_gravity="center_horizontal"
                 android:gravity="center"
                 android:text="조식"
@@ -59,16 +46,17 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_gravity="center_horizontal"
-                android:layout_marginTop="15dp"
+                android:gravity="center"
                 android:textSize="15dp" />
 
 
             <TextView
-                android:layout_weight="0.5"
+                android:id="@+id/lunch"
                 android:layout_width="match_parent"
-                android:layout_height="0dp"
-                android:gravity="center"
+                android:layout_height="60dp"
+                android:layout_marginTop="70dp"
                 android:layout_gravity="center_horizontal"
+                android:gravity="center"
                 android:text="점심"
                 android:textAppearance="?android:attr/textAppearanceLarge"
                 android:textSize="20dp"
@@ -79,13 +67,14 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_gravity="center_horizontal"
-                android:layout_marginTop="15dp"
+                android:gravity="center"
                 android:textSize="15dp" />
 
             <TextView
-                android:layout_weight="0.5"
+                android:id="@+id/dinner"
                 android:layout_width="match_parent"
-                android:layout_height="0dp"
+                android:layout_height="60dp"
+                android:layout_marginTop="70dp"
                 android:gravity="center"
                 android:text="저녁"
                 android:textAppearance="?android:attr/textAppearanceLarge"
@@ -97,12 +86,12 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_gravity="center_horizontal"
-                android:layout_marginTop="15dp"
-                android:textSize="20dp" />
+                android:layout_marginBottom="50dp"
+                android:gravity="center"
+                android:textSize="15dp" />
 
 
         </LinearLayout>
-
-    </androidx.cardview.widget.CardView>
+    </ScrollView>
 
 </LinearLayout>

@@ -1,10 +1,10 @@
 plugins {
     id 'com.android.application'
     id 'kotlin-android'
-    id 'kotlin-android-extensions'
 }
 
 android {
+
     compileSdkVersion 30
     buildToolsVersion "30.0.2"
 
@@ -16,7 +16,15 @@ android {
         versionName "1.0"
 
         testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
+
     }
+
+    buildFeatures {
+        // 뷰 바인딩 활성화
+        viewBinding true
+    }
+
+
 
     buildTypes {
         release {
@@ -47,6 +55,7 @@ dependencies {
     implementation "com.squareup.retrofit2:adapter-rxjava2:$retrofit_version"
     implementation 'com.squareup.okhttp3:okhttp:3.12.0'
     implementation 'com.squareup.okhttp3:logging-interceptor:3.4.2'
+    implementation 'com.google.code.gson:gson:2.8.6'
     implementation "kr.go.neis.api:neis-api:4.0.1"
     testImplementation 'junit:junit:4.+'
     androidTestImplementation 'androidx.test.ext:junit:1.1.2'
